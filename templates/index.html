@@ -1,0 +1,684 @@
+{% extends "layout.html" %}
+{% block content %}
+    <body class="appear-animate">
+        
+       
+        
+        <!-- Page Wrap -->
+        <div class="page" id="top">
+            
+            <!-- Navigation panel -->
+            <nav class="main-nav js-stick">
+                <div class="container relative clearfix">
+                    <!-- Logo ( * your text or image into link tag *) -->
+                    <div class="nav-logo-wrap local-scroll">
+                        <a href="#top" class="logo">
+                            <img src="static/images/blackbox_b33.png" alt="" />
+                        </a>
+                    </div>
+                    <div class="mobile-nav">
+                        <i class="fa fa-bars"></i>
+                    </div>
+                    <!-- Main Menu -->
+                    <div class="inner-nav desktop-nav">
+                        <ul class="clearlist scroll-nav local-scroll">
+                            <li class="active"><a href="#home">Home</a></li>
+                            <li><a href="#test">Test it</a></li>
+                            <li><a href="#services">Services</a></li>
+
+
+                            
+                            <!-- Button -->
+                            <li>
+                                <a href="#contact"><span class="btn btn-mod btn-circle"><i class="fa fa-envelope"></i> Contact</span></a>
+                            </li>
+                            <!-- End Button -->
+                            
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- End Navigation panel -->
+            
+            <!-- Home Section -->
+            <section class="page-section pb-100 pb-md-80 pb-sm-60" id="home">
+                <div class="relative container">
+                    
+                    <div class="row">
+                        <div class="col-md-10 col-md-offset-1">
+                            
+                            <div class="align-center">
+                                <h1 class="hs-line-8 no-transp font-alt mb-40 mb-xs-20">A Deep Learning X-ray Imaging Application</h1>
+                                <h2 class="hs-line-15 black font-alt">classification model for pneumonia in children & adults</h2>
+                                   <div class="mb-10 local-scroll">
+                                <a href="#test" class="btn btn-mod btn-border btn-circle btn-large ">Test the Model</a>
+                            </div>
+
+                            </div>
+                    
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+            </section>
+            <!-- End Home Section -->
+            
+            <!-- Big Devices Image -->
+            <div class="image-fullwidth wow fadeInUp">
+                <img src="static/images/big-device-mockup_new.jpg" alt="" />
+            </div>
+            <!-- End Big Devices Image -->
+
+
+            <!-- Section -->
+            <section class="page-section" id="test">
+                <div class="container relative">
+                    
+                    <div class="row">
+                        
+                        <div class="col-md-7 mb-sm-40">
+                            
+                            <!-- Image -->
+                            <div class="work-full-media mt-0 white-shadow wow fadeIn text-center">
+                                <img id="selected-image" src="static/images/promo-3.png" alt="" style="max-height:425px;" />
+                            </div>
+                            <!-- End Image -->
+                            
+                        </div>
+                        
+                        <div class="col-md-5 col-lg-4 col-lg-offset-1">
+                            
+                            <!-- Description -->
+                            <div class="text">
+                                
+                                <h3 class="font-alt mb-30 mb-xxs-10">Try out the predictive model here</h3>
+                                
+                                <p>
+                                     Trained on over 5,000 images, this convolutional neural network model has an accuracy of above 98% when identifying pneumonia in an x-ray image. Upload a file in either jpg or png format with the buttons below. Below the button are some label images you can download and test the neural net on for yourself.
+                                </p>
+                                
+                                <div class="mt-40">
+                                    <input id="image-selector" style="display:none" type="file">
+                                    <a id="upload_link" class="btn btn-mod btn-border btn-round btn-medium" type="file" >upload Image</a>
+                                    <a id="predict-button" class="btn btn-mod btn-border btn-round btn-medium">Predict</a>
+                                </div>
+                                
+                            </div>
+                            <!-- End Description -->
+                            
+                        </div>
+
+
+                                            <!-- Row -->
+                    <div class="row">
+                        
+                        <!-- Col -->
+                        
+                        <div class="col-md-8 col-md-offset-2 text-center" style="margin-top: 60px;">
+
+                                                         <!-- Divider -->
+                            <h5 class="text-center">%network certainty% </h5>
+                   <hr class="mb-70 mb-xs-30"/>
+
+                   
+
+                   <!-- End Divider -->
+
+                             </blockquote>
+                            <!-- Bar Item -->
+                            <div class="col-md-6 text-center" style="margin-top: -25px;">
+                                
+                                    <h2 class="font-alt">Pneumonia:  <span id="pneumonia-prediction">83</span>%</h2>
+                                    <h2 class="font-alt" style="margin-top: 20px;">Normal: <span id="normal-prediction">17</span>%</h2>
+
+
+                                
+                            </div>
+                            <!-- End Bar Item -->
+                            
+                            <!-- Bar Item -->
+                            <div class="col-md-6 text-center" style="margin-top: -25px;">
+
+
+PNEUMONIA
+<div class="container4">
+  <div id="s1" class="skills html">83%</div>
+<br>
+
+
+  <div id="s2" class="skills css">17%</div>
+  Normal
+</div>
+
+                            </div>
+                            <!-- End Bar Item -->
+
+                            <style>
+* {box-sizing: border-box}
+
+.container4 {
+  width: 100%;
+}
+
+.skills {
+  text-align: right;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: black;
+font-weight: bold;
+
+}
+.html {width: 83%; background-color:   #DC143C;}
+.css {width: 17%; background-color:         #87CEFA;}
+
+
+</style>
+</head>
+<body>
+
+
+
+                           
+                        </div>
+                        
+                        <!-- End Col -->  
+
+                        
+                    </div>
+                    <!-- End Row -->
+<div class="col-md-8 col-md-offset-2 text-center" >
+
+                            <h3 class="font-alt text-center" style="display:inline;"> Model's Prediction: </h3><h1 class="text-center" style="display:inline;" id="predict-title">  </h1>
+                             <blockquote>
+                                               <hr class="mb-70 mb-xs-30"/>
+
+
+         
+                    <!-- Script for Predict -->
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+
+$('#click').click(
+    function(){
+        $(".html").removeAttr('style').css("width","5%");
+        $("#s1").html("5%");
+        $("#predict-title").html("Normal");
+    });
+
+$('#upload_link').click(
+    function(){
+        $("#image-selector:hidden").trigger('click');
+    });
+
+    
+
+    let base64Image;
+    $("#image-selector").change(function() {
+        let reader = new FileReader();
+        reader.onload = function(e){
+            let dataURL = reader.result;
+            $('#selected-image').attr("src", dataURL);
+
+            if(dataURL.includes("image/png")){
+                base64Image = dataURL.replace("data:image/png;base64,","");
+                $("#if-statement").text("PNG");
+            } 
+            else{
+                base64Image = dataURL.replace("data:image/jpeg;base64,","");
+                $("#if-statement").text("JPG");
+            }
+            
+            $("#base64Image").text(base64Image);
+            console.log(base64Image);
+        }
+        reader.readAsDataURL($("#image-selector")[0].files[0]);
+        $("#dog-prediction").text("");
+        $("#cat-prediction").text("");
+
+    });
+
+    $("#predict-button").click(function(event){
+        let message = {
+            image: base64Image
+        }
+        console.log(message);
+        $.post("http://127.0.0.1:5000/predict", JSON.stringify(message),function(response){
+            $("#normal-prediction").text(response.prediction.Normal.toFixed(2) * 100);
+            $("#pneumonia-prediction").text(response.prediction.Pneumonia.toFixed(2) * 100);
+
+            p1 = response.prediction.Normal.toFixed(2) * 100;
+            p1 += "%";
+            p2 = response.prediction.Pneumonia.toFixed(2) * 100;
+            p2  += "%";
+
+            $("#s2").text(p1);
+            $("#s1").text(p2);
+
+            var n_pred = parseInt(response.prediction.Normal.toFixed(2) * 100);
+            var p_pred = parseInt(response.prediction.Pneumonia.toFixed(2) * 100);
+
+            if(n_pred < p_pred){
+                $("#predict-title").text("Pneumonia");
+            }
+            else{
+                $("#predict-title").text("Normal");
+
+            }
+
+
+            p_pred += "%";
+            n_pred += "%";
+            $(".html").removeAttr('style').css("width",p_pred);
+
+            $(".css").removeAttr('style').css("width",n_pred);
+
+
+            console.log(response);
+        });
+    });
+});
+</script>
+
+
+                 <div class="row">
+                        <div class="col-md-8 col-md-offset-2">
+                            <div class="section-text align-center">
+                                
+                                <blockquote>
+                                    <p>
+                                        You can download labeled test images here
+                                    </p>
+                                </blockquote>
+                                
+                                <!-- Download -->
+                                <div class="align-center">
+                                
+                                    <a href="static/test_imgs.zip" class="download-button round mb-xs-10" download>
+                                        <span class="db-icon">
+                                            <i class="fa icon-pictures "></i>
+                                        </span>
+                                        <span class="db-title">
+                                            Download test images in a zip folder
+                                        </span>
+                                        <span class="db-descr">
+                                            
+                                        </span>
+                                    </a>
+                                   
+                                    
+                                </div>
+                                <!-- End Download -->
+                                
+                            </div>
+                        </div>
+                    </div>
+                        
+                    </div>
+                </div>
+            </section>
+            <!-- End Section -->
+            
+          
+      
+            <!-- Call Action Section -->
+            <section class="page-section pt-0 pb-0 banner-section bg-dark" data-background="static/images/section.jpg">
+                <div class="container relative">
+                    
+                    <div class="row">
+                        
+                        <div class="col-sm-6">
+                            
+                            <div class="mt-140 mt-lg-80 mb-140 mb-lg-80">
+                                <div class="banner-content">
+                                    <h3 class="banner-heading font-alt">Machine Learning Is Changing The Game For Major Industries
+</h3>
+                                    <div class="banner-decription">
+                                         Everything from farming to pharmaceuticals and cybersecurity is fair game. In the next five years, expect to see even more machine learning in action to change the way you live. 
+                                    </div>
+                                    <div class="local-scroll">
+                                        <a href="pages-contact-1.html" class="btn btn-mod btn-w btn-circle btn-large">Lets talk about <br>implementing machine learing into your business</a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="col-sm-6 banner-image wow fadeInUp">
+                            <img src="static/images/promo-1.png" alt="" />
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+            </section>
+            <!-- End Call Action Section -->
+
+        
+            
+            <!-- Head Section -->
+            <section id="services" class="small-section bg-gray-lighter">
+                <div class="relative container align-left">
+                    
+                    <div class="row">
+                        
+                        <div class="col-md-8">
+                            <h1 class="hs-line-11 font-alt mb-20 mb-xs-0">Services</h1>
+                            <div class="hs-line-4 font-alt black">
+                                 Implementing Machine Learning in your business model
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-4 mt-30">
+                            <div class="mod-breadcrumbs font-alt align-right">
+                                <a href="#">Home</a>&nbsp;/&nbsp;<span>Services</span>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                </div>
+            </section>
+            <!-- End Head Section -->
+            
+            
+            <!-- Features Section -->
+            <section class="page-section">
+                <div class="container relative">
+                    
+                    <!-- Features Grid -->
+                    <div class="row alt-features-grid mb-70 mb-xs-40">
+                        
+                        <!-- Text Item -->
+                        <div class="col-sm-3">
+                            <div class="alt-features-item align-center">
+                                <div class="alt-features-descr align-left">
+                                    <h4 class="mt-0 font-alt">Work process</h4>
+                                    Understanding the Process of Collecting, Cleaning, Analyzing, Modeling, Visualizing Data, and  Implementing the model into your workflow
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Text Item -->
+                        
+                        <!-- Features Item -->
+                        <div class="col-sm-3">
+                            <div class="alt-features-item align-center">
+                                <div class="alt-features-icon">
+                                    <span class="icon-chat"></span>
+                                </div>
+                                <h3 class="alt-features-title font-alt">1. Discussion</h3>
+                            </div>
+                        </div>
+                        <!-- End Features Item -->
+                        
+                        <!-- Features Item -->
+                        <div class="col-sm-3">
+                            <div class="alt-features-item align-center">
+                                <div class="alt-features-icon">
+                                    <span class="icon-linegraph"></span>
+                                </div>
+                                <h3 class="alt-features-title font-alt">2. Modeling</h3>
+                            </div>
+                        </div>
+                        <!-- End Features Item -->
+                        
+                        <!-- Features Item -->
+                        <div class="col-sm-3">
+                            <div class="alt-features-item align-center">
+                                <div class="alt-features-icon">
+                                    <span class="icon-browser"></span>
+                                </div>
+                                <h3 class="alt-features-title font-alt">3. Production</h3>
+                            </div>
+                        </div>
+                        <!-- End Features Item -->
+                        
+                   </div>
+                   <!-- End Features Grid -->
+                   
+                   <!-- Divider -->
+                   <hr class="mb-70 mb-xs-30"/>
+                   <!-- End Divider -->
+            
+                   
+                   <div class="row multi-columns-row">
+                        
+                        <!-- Post Item -->
+                        <div class="col-sm-6 col-md-4 col-lg-4 mb-md-50 wow fadeIn" data-wow-delay="0.1s" data-wow-duration="2s">
+                            
+                            <div class="post-prev-img">
+                                <img src="static/images/logr.png" alt="" />
+                            </div>
+                            
+                            <div class="post-prev-title font-alt">
+                                Logistic Regression
+                            </div>
+                            
+                            <div class="post-prev-text">
+                                Logistic regression is used to find the probability of event=Success and event=Failure. We should use logistic regression when the dependent variable is binary (0/ 1, True/ False, Yes/ No) in nature. Here the value of Y ranges from 0 to 1 and it can represented by following equation.
+                            </div>
+                            
+                        </div>
+                        <!-- End Post Item -->
+                        
+                        <!-- Post Item -->
+                        <div class="col-sm-6 col-md-4 col-lg-4 mb-md-50 wow fadeIn" data-wow-delay="0.2s" data-wow-duration="2s">
+                            
+                            <div class="post-prev-img">
+                                <img src="static/images/cnn2.png" alt="" />
+                            </div>
+                            
+                            <div class="post-prev-title font-alt">
+                                Convolutional neural network
+                            </div>
+                            
+                            <div class="post-prev-text">
+                                In deep learning, a convolutional neural network is a class of deep neural networks, most commonly applied to analyzing visual imagery. CNNs are regularized versions of multilayer perceptrons.
+                            </div>
+                            
+                        </div>
+                        <!-- End Post Item -->
+                        
+                        <!-- Post Item -->
+                        <div class="col-sm-6 col-md-4 col-lg-4 mb-md-50 wow fadeIn" data-wow-delay="0.3s" data-wow-duration="2s">
+                            
+                            <div class="post-prev-img">
+                                <img src="static/images/rf.jpg" alt="" />
+                            </div>
+                            
+                            <div class="post-prev-title font-alt">
+                                Random forest
+                            </div>
+                            
+                            <div class="post-prev-text">
+                                Random forests or random decision forests are an ensemble learning method for classification, regression and other tasks that operates by constructing a multitude of decision trees at training time and outputting the class that is the mode of the classes or mean prediction of the individual trees 
+                            </div>
+                            
+                        </div>
+                        <!-- End Post Item -->
+                        
+                    </div>
+                        
+                </div>
+            </section>
+            <!-- End Features Section -->
+            
+
+            
+            <!-- Newsletter Section -->
+            <section class="small-section bg-dark-lighter">
+                <div class="container relative">
+                    
+                    <form class="form align-center" id="mailchimp">
+                        <div class="row">
+                            <div class="col-md-8 col-md-offset-2">
+                                
+                                <div class="newsletter-label font-alt">
+                                    Stay informed with our newsletter
+                                </div>
+                                
+                                <div class="mb-20">
+                                    <input placeholder="Enter Your Email" class="newsletter-field form-control input-md round mb-xs-10" type="email" pattern=".{5,100}" required/>
+                                    
+                                    <button type="submit" class="btn btn-mod btn-medium btn-w btn-round mb-xs-10">
+                                        Subscribe
+                                    </button>
+                                </div>
+                                
+                                <div class="form-tip">
+                                    <i class="fa fa-info-circle"></i> Please trust us, we will never send you spam
+                                </div>
+                                
+                                <div id="subscribe-result"></div>
+                                
+                            </div>
+                        </div>
+                    </form>
+                    
+                </div>
+            </section>
+            <!-- End Newsletter Section -->
+
+
+
+            
+            <!-- Contact Section -->
+            <section class="page-section" id="contact">
+                <div class="container relative">
+                    
+                    <h2 class="section-title font-alt mb-70 mb-sm-40">
+                        Want Your Business To harness the power of Machine Learning?
+                    </h2>
+
+                    <h6 class="font-alt text-center">
+                       reach out via email or phone with the information below 
+                    </h6>
+                    
+                    <div class="row mb-60 mb-xs-40">
+                        
+                        <div class="col-md-8 col-md-offset-2">
+                            <div class="row">
+                           
+                                
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                  <div class="row mb-60 mb-xs-40">
+                        
+                        <div class="col-md-8 col-md-offset-2">
+                            <div class="row">
+                                
+                                <!-- Phone -->
+                                <div class="col-sm-6 col-lg-4 pt-20 pb-20 pb-xs-0">
+                                    <div class="contact-item">
+                                        <div class="ci-icon">
+                                            <i class="fa fa-phone"></i>
+                                        </div>
+                                        <div class="ci-title font-alt">
+                                            Call Us
+                                        </div>
+                                        <div class="ci-text">
+                                            +424 272 5860
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Phone -->
+                                
+                                <!-- Address -->
+                                <div class="col-sm-6 col-lg-4 pt-20 pb-20 pb-xs-0">
+                                    <div class="contact-item">
+                                        <div class="ci-icon">
+                                            <i class="fa fa-map-marker"></i>
+                                        </div>
+                                        <div class="ci-title font-alt">
+                                            Address
+                                        </div>
+                                        <div class="ci-text">
+                                            5535 westlawn ave Los Angeles 90066
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Address -->
+                                
+                                <!-- Email -->
+                                <div class="col-sm-6 col-lg-4 pt-20 pb-20 pb-xs-0">
+                                    <div class="contact-item">
+                                        <div class="ci-icon">
+                                            <i class="fa fa-envelope"></i>
+                                        </div>
+                                        <div class="ci-title font-alt">
+                                            Email
+                                        </div>
+                                        <div class="ci-text">
+                                            <a href="mailto:john.rice.create@gmail.com">john.rice.create@gmail.com</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Email -->
+                                
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                    
+                </div>
+            </section>
+            <!-- End Contact Section -->
+            
+            
+            
+            <!-- Foter -->
+            <footer class="page-section bg-gray-lighter footer pb-60">
+                <div class="container">
+                    
+                    <!-- Footer Logo -->
+                    <div class="local-scroll mb-30 wow fadeInUp" data-wow-duration="1.2s">
+                        <a href="#top"><img src="static/images/blackbox_b33.png" width="178" height="136" alt="" /></a>
+                    </div>
+                    <!-- End Footer Logo -->
+                    
+                  
+                    <!-- Footer Text -->
+                    <div class="footer-text">
+                        
+                        <!-- Copyright -->
+                        <div class="footer-copy font-alt">
+                            <a href="" target="_blank">&copy; Blackbox Medical 2019</a>.
+                        </div>
+                        <!-- End Copyright -->
+                        
+                        <div class="footer-made">
+                            Made with love for great people.
+                        </div>
+                        
+                    </div>
+                    <!-- End Footer Text --> 
+                    
+                 </div>
+                 
+                 
+                 <!-- Top Link -->
+                 <div class="local-scroll">
+                     <a href="#top" class="link-to-top"><i class="fa fa-caret-up"></i></a>
+                 </div>
+                 <!-- End Top Link -->
+                 
+            </footer>
+            <!-- End Foter -->
+
+
+
+
+        
+        
+        </div>
+        <!-- End Page Wrap -->
+        
+        {% endblock content %}
